@@ -37,7 +37,8 @@ class pyGeoMap:
     def plot(self, title="Figure", pins=None):
         long = []
         lat = []
-        self.setPins(pins)
+        if self.pins == None:
+            self.setPins(pins)
         
         if self.pins is not None:
             for (l, ll) in self.pins:
